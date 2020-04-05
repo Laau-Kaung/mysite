@@ -1,0 +1,21 @@
+{% extends 'music/layout.html' %}
+{% block body %}
+<div class="container" style="text-align: center;">
+        <h2>All Album</h2>
+</div>
+<div class="container">
+        <div class="music-div" style="overflow-x:auto;">
+                <div class="row justify-content-lg-center">
+                        {% for album in all_albums %}
+                        <div class="col-4" style="text-align:center; padding:3em 0em; ">
+                                <a href="{% url 'music:album_detail' album.id %}"><img height="150px" width="150px"
+                                                src="{{album.album_logo}}" alt="album1"></a>
+                                <div><span class="bold">Artist</span> : {{album.artist}}</div>
+                                <div><span class="bold">Album Title</span> : {{album.album_title}}</div>
+                        </div>
+                        {%endfor%}
+                </div>
+
+        </div>
+</div>
+{% endblock %}

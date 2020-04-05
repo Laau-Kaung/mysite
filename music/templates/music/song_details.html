@@ -1,0 +1,8 @@
+{% extends 'music/layout.html' %}
+{% block body %}
+    <h2>{{song_details.song_title}}</h2>
+    <ul>
+        <li>Artist :  <a href="{% url 'music:artist_detail' song_details.album.artist %}">{{song_details.album.artist}}</a></li>
+        <li>Album : <a href="{% url 'music:album_detail' song_details.album.id %}">{{song_details.album.album_title}}</a>  (<a href="{% url 'music:music' %}">{{song_details.album.genre}}</a>)</li>
+    </ul>
+    {% endblock %}

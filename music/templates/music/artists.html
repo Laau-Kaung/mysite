@@ -1,0 +1,12 @@
+{% extends 'music/layout.html' %}
+{% block body %}
+{% for artist in artists %}
+<ul>
+    <li>
+        <a href="{% url 'music:artist_detail' artist %}">
+            {{artist}}
+        </a>
+    </li>
+</ul>
+{% endfor %}
+{% endblock %}

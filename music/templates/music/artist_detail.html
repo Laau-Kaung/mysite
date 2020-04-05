@@ -1,0 +1,25 @@
+{% extends 'music/layout.html' %}
+{% block body %}
+<img src="https://scontent.frgn5-1.fna.fbcdn.net/v/t1.0-9/s960x960/79092909_1108882206170007_8423633200600842240_o.jpg?_nc_cat=1&_nc_sid=85a577&_nc_eui2=AeFtkztX1H8fqS4y3tsOum5ufeRUYPVXjkl95FRg9VeOSaLU7EsoLRDZ1J0Jio8qYw4W3SsxOgyovQDE3TEJNbid&_nc_ohc=YTTzaDM3OWQAX_slrhi&_nc_ht=scontent.frgn5-1.fna&_nc_tp=7&oh=c6ce25905c1e760446dbde668b7bbf75&oe=5EB00CD0"
+    alt="" height="150px" width="150px">
+<h4>{{albums.first.artist}}</h4>
+<ul>
+    {% for artist in albums %}
+    <li>
+        <a href="{% url 'music:album_detail' artist.id %}">
+            {{artist.album_title}}
+        </a>
+    </li>
+    <ul>
+        {% for song in artist.song_set.all %}
+        <li>
+            <a href="{% url 'music:song_detail' song.id %}">
+                {{song.song_title}}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'music/layout.html' %}
+{% block body %}
+    <div class="container">
+        <h1 style="text-align: center; color:blue;">Welcome from my music channel</h1>
+        <div>
+            <div><a href="{% url 'music:album' %}">All Albums</a></div>
+            <div><a href="{% url 'music:song' %}">All Songs</a></div>
+        </div>
+    </div>
+{% endblock %}

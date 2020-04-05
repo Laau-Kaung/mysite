@@ -1,0 +1,12 @@
+{% extends 'music/layout.html' %}
+{% block body %}
+<img src="{{album.album_logo}}" alt="">
+<div>Album Title : {{album.album_title}}</div>
+<div>Artist : {{album.artist}}</div>
+<ul>
+    {% for song in songs %}
+    <li><a style="text-decoration: none;" href="{% url 'music:song_detail' song.id %}">{{song.song_title}} -
+            {{song.file_type}}</a></li>
+    {%endfor%}
+</ul>
+{% endblock %}

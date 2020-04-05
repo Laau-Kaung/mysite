@@ -1,0 +1,32 @@
+.slogo{
+    font-family: 'Playfair Display', serif;
+    padding:0%; 
+    margin:0px;
+}
+nav.nav-color{
+    background-color:#18ffff ;
+    color: blue;
+}
+body{
+    color: green;
+    background-color: white;
+}
+a.nav-link{
+    text-decoration: none;
+    color: blueviolet;
+    font-weight: bold;
+}
+a.nav-link:hover{
+    color: white;
+}
+span.bold{
+    font-weight: bold;
+}
+a.song{
+    font-size: 0.7em;
+}
+a.navbar-brand{
+    font-family: 'Lobster', cursive;
+    letter-spacing: 0px;
+    font-size: 2.5em;
+}
